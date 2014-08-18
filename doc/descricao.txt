@@ -1,0 +1,89 @@
+###################################################
+###################################################
+###
+### ORACULO
+###
+###################################################
+###################################################
+
+1. Objetivo
+	
+	O Oráculo tem por objetivo ajudar o estudante a organizar a sua vida academia. 
+	No sistema o aluno poderá cadastrar suas notas para ir acompanhando o seu progresso com o tempo. 
+	O seu desempenho será calculado automaticamente à medida que novas notas são inseridas. 
+	
+	O sistema contará com um cadastro de professores onde o aluno pode cadastrar professores e dados como 
+	e-mail, telefone, endereço/departamento, etc. a fim de melhorar a obtenção de dados e posteriormente o 
+	contato com os professores.
+	
+	O aluno poderá cadastrar matérias. Cada matéria estará diretamente ligada a um professor previamente 
+	cadastrado. Nas matérias o aluno poderá informar as datas de ocorrência para consultas futuras.
+	
+	O aluno poderá ainda cadastrar datas de provas e trabalhos para cada matéria. Os quais o sistema avisará 
+	ao estudante por e-mail com antecedência sobre o acontecimento dos mesmos. O aluno definirá com quantos 
+	dias de antecedência deseja receber a notificação.
+	
+	A fim de melhorar o desempenho acadêmico do aluno, ele pode se desafiar ao cadastrar metas para suas 
+	atividades pessoas. As metas terão uma data de início, uma data prevista para término e uma descrição 
+	breve sobre do que se trata a meta.
+	
+
+2. Funcionalidades
+
+	2.1. Login
+	
+		Para acessar o sistema o aluno precisará antes se cadastrar. Durante o cadastro ele informará um nome 
+		de usuário único e uma senha, os quais usará para acesso ao sistema.
+		
+		Na página de login do sistema existirá um link para a obtenção de uma nova senha através do e-mail cadastrado.
+		
+		Uma vez logado no sistema o usuário terá acesso ao seus dados pessoais e poderá personaliza-los da forma como 
+		entender.
+
+	2.2. Home
+	
+		Na Home o usuário poderá verificar de imediato as suas metas atingidas e pendentes (podendo nas configurações 
+		do usuário definir se quer ou não exibir as metas já concluídas na Home) e as próximas atividades marcadas 
+		(provas, seminários, relatórios, etc.).
+		
+		Ainda na Home haverá um menu de acesso rápido onde o aluno vai poder cadastrar professores, matérias ou 
+		atividades, ver seu desempenho no período ou alterar as suas configurações personalizadas.
+
+	2.3. Cadastro de professores
+
+		O aluno poderá cadastrar quantos professores quiser. Esta funcionalidade se assemelha a uma lista de contatos. 
+		O aluno cadastrará um professor e junto com ele suas informações de contato como e-mail, telefone, endereço, etc.
+
+		Poderá ainda ser incluído nas informações do professor o seu currículo Lattes e outras informações pertinentes 
+		como projetos de pesquisa, artigos, etc.
+
+	2.4. Cadastro de matérias
+
+		O aluno cadastrará as matérias que está frequentando no período corrente. No fim do período (será definido pelo 
+		estudante se os períodos são divididos em anos ou semestres) o sistema automaticamente limpará todas as matérias 
+		cadastradas para que seja possível o cadastro de novas no período seguinte (esta funcionalidade pode ser desativada 
+		nas configurações personalizadas do aluno).
+		
+		Ao cadastrar uma matéria o aluno deverá escolher (em uma lista dos professores já cadastrados pelo aluno) qual 
+		professor leciona a matéria que está sendo cadastrada.
+
+	2.5. Cadastro de atividades
+	
+		Poderão ser cadastradas atividades que contarão nota como trabalhos, provas, seminários, etc. Nessas atividades 
+		será informado, o nome da atividade, a data em que ocorrerá e com quanto tempo de antecedência o aluno deseja 
+		ser avisado por e-mail sobre a atividade.
+
+		As atividades estarão ligadas diretamente à uma matéria. O aluno será obrigado então a informar referente a qual 
+		matéria a atividade que está sendo cadastrada pertence.
+
+		Passada a data da atividade o aluno poderá informar qual foi a sua pontuação na realização da mesma para o cálculo 
+		de desempenho.
+
+	2.6. Cadastro de metas
+
+		Metas poderão ser cadastradas pelo aluno a fim de impulsioná-lo na realização das suas atividades pessoas tais 
+		como estudos, realização de listas, etc.
+
+		Durante o cadastro de uma meta o aluno deverá informar uma data de término. A cada parte realizada de uma meta o 
+		aluno deverá informar ao sistema quantos por cento foram realizados na meta. Cada nova porcentagem inserida será 
+		somada à porcentagem total terminada até que a lista alcance os 100% e seja dada como finalizada.
