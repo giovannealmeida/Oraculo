@@ -11,7 +11,7 @@
 		<img src="imgs/usuarioH.jpg" alt="imagem usuario" />
 		<p id="user_name">Usuário</p>
 		<nav class="nav_links">
-			<h3 class="list_header">Cadastro</h3>
+			<h3 class="list_header">Listagem</h3>
 			<ul>
 				<li><a href="#">Professores</a></li>
 				<li><a href="#">Matérias</a></li>
