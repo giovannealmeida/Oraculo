@@ -3,16 +3,16 @@
 	margin: 0;
 }
 body {
+	padding: 60px 30px;
 	background-color:#060;
+	font-family: Consolas;
 }
 
 #user_info {
-	position: relative;
 	float: left;
 	background-color: #FFFF99;
-	top:175px;
-	left: 25px;
 	width: 200px;
+	margin: 0px 15px;
 	padding: 20px 0;
 	height: 350px;
 }
@@ -22,9 +22,36 @@ body {
 	margin: 0 auto;
 }
 
-#user_info p#user_name {
+#user_info, #user_name {
 	text-align: center;
-	font-family: Verdana;
+	font-weight:bold;
+}
+
+#table_caption{
+	font-weight:300;
+	font-size:24px;
+	background-color:#090;
+	color:#D7F4D7;
+	text-align:left;
+	padding: 0px 10px;
+}
+
+#table_caption a{
+	text-decoration:none;
+	font-weight:600;
+	font-size:18px;
+	background-color:#090;
+	color:#D7F4D7;
+	text-align:left;
+}
+
+#table_caption a:hover{
+	text-decoration:underline;
+	font-weight:600;
+	font-size:18px;
+	background-color:#090;
+	color:#D7F4D7;
+	text-align:left;
 }
 
 .nav_links{
@@ -38,9 +65,9 @@ body {
 .nav_links .list_header {
 	text-align: left;
 	background-color: #060;
-	font-family: Verdana;
+	font-weight:bold;
 	color: white;
-	font-size: 15px;
+	font-size: 18px;
 	padding: 5px;
 }
 
@@ -57,8 +84,7 @@ body {
 .nav_links ul li a{
 	display: block;
 	text-decoration: none;
-	font-family: Verdana;
-	font-size: 13px;
+	font-size: 15px;
 	padding: 3px;
 	color:black;
 }
@@ -72,9 +98,6 @@ body {
 }
 
 #itens_container {
-	position: relative;
-	left: 70px;
-	top: 175px;
 	float: left;
 	background-color: #FFFF99;
 	width: 1000px;
@@ -82,7 +105,7 @@ body {
 	height: 350px;
 }
 
-a#aba_nome{
+#aba_nome{
 	display: inline-block;
 	position: absolute;
 	margin-top: -70px;
@@ -90,9 +113,9 @@ a#aba_nome{
 	height: 0;
     min-width: 100px;
     line-height: 50px;
-	font-family: Verdana;
     text-decoration: none;
     color: black;
+	font-size:20px;
     font-weight: bold;
     border-right: 30px solid transparent;
     border-bottom: 30px solid #FFFF99;
@@ -105,10 +128,25 @@ a#aba_nome{
 	height: 100%;
 }
 
+#form{
+	margin:15px;
+}
+
+#opt_ver{
+	color: #2dca2d;
+}
+
+#opt_editar{
+	color: #6868ff;
+}
+
+#opt_remover{
+	color: #ff3838;
+}
+
 .table_listagem {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     width: 100%;
-    margin: 0 auto;
+	margin-bottom:20px;
     border-collapse: collapse;
     text-align: center;
 }
@@ -124,7 +162,8 @@ a#aba_nome{
     padding-top: 5px;
     padding-bottom: 4px;
     background-color: #060;
-    color: #ffffff;
+	font-weight:normal;
+    color: #D7F4D7;
 }
 
 .table_listagem td {
@@ -141,24 +180,84 @@ a#aba_nome{
 	color: black;
 }
 
-#itens_container a.add_button{
-	position: relative;
-	top:30px;
+.add_button{
 	padding: 7px;
-	border: 1px solid black;
-	background: #bfd9bf;
+	border: 2px solid black;
+	background: #D7F4D7;
 	text-decoration: none;
+	font-weight:bold;
 	color: black;
-
 }
 
-#itens_container a.add_button:hover{
+.add_button:hover{
+	background: #093;
+	color:#FFF;
+}
+
+.add_button:active{
 	background: #608660;
-}
-
-#itens_container a.add_button:active{
-	background: #002600;
 	color: white;
 }
 
+.clean_button{
+	padding: 7px;
+	margin:5px;
+	width:120px;
+	border: 2px solid black;
+	background: #F85230;
+	text-decoration: none;
+	font-weight:bold;
+	color: white;
+}
 
+.clean_button:hover{
+	background: #C30;
+	color:#FFF;
+}
+
+.clean_button:active{
+	background: #971D05;
+	color: white;
+}
+
+.back_button{
+	padding: 7px;
+	margin:5px;
+	width:120px;
+	border: 2px solid black;
+	background: #40B3B3;
+	text-decoration: none;
+	font-weight:bold;
+	color: white;
+}
+
+.back_button:hover{
+	background: #099;
+	color:#FFF;
+}
+
+.back_button:active{
+	background: #266B6B;
+	color: white;
+}
+
+.save_button{
+	padding: 7px;
+	margin:5px;
+	width:120px;
+	border: 2px solid black;
+	background: #090;
+	text-decoration: none;
+	font-weight:bold;
+	color: white;
+}
+
+.save_button:hover{
+	background: #2E8426;
+	color:#FFF;
+}
+
+.save_button:active{
+	background: #060;
+	color: white;
+}
