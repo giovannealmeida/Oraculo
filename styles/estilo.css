@@ -14,7 +14,8 @@ body {
 	width: 200px;
 	margin: 0px 15px;
 	padding: 20px 0;
-	height: 350px;
+	min-height: 400px;
+
 }
 
 #user_info img {
@@ -102,7 +103,7 @@ body {
 	background-color: #FFFF99;
 	width: 1000px;
 	padding: 20px 0;
-	height: 350px;
+	min-height: 400px;
 }
 
 #aba_nome{
@@ -262,7 +263,24 @@ body {
 	color: white;
 }
 
-#form form label{
+#form form  label{
+	height: 10px;
+	margin-top: 4px;
+	padding-top: 12px;
+	padding-left: 6px;
 	min-width: 100px;
-	text-align:right;
+	text-align: right;
+	float: left;
+	font-size: 1.2em;
+}
+
+#form form  .input_text{
+	margin: 15px 0px 0px 15px;
+	height: 20px;
+	padding: 1px 0px 1px 2px;
+	background-color: #FFF;
+	width: 250px;
+	color: #333;
+	border: 1px ridge #CACACA;
+
 }
