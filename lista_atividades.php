@@ -9,8 +9,8 @@
 					<tr>
 						<th>Nome</th>
 						<th>Matéria</th>
-						<th>Data de Entrega</th>
 						<th>Tipo</th>
+						<th>Data de Entrega</th>
 						<th>Opções</th>
 
 					</tr>
