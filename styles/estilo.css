@@ -261,3 +261,8 @@ body {
 	background: #060;
 	color: white;
 }
+
+#form form label{
+	min-width: 100px;
+	text-align:right;
+}
