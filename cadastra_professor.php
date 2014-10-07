@@ -1,6 +1,6 @@
 <?php require "header.php" ?>
 		
-	<section id="itens_container">
+	<section id="conteudo_container">
 		<a href="#" id="aba_nome">Novo Professor</a>
 		
 		<div id="form">
@@ -16,5 +16,5 @@
 			</form> 
 		</div>
 	</section>
-</body>
+<?php include "footer.php"; ?>
 </html>

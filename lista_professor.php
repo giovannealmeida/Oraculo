@@ -1,10 +1,10 @@
 <?php require "header.php" ?>
 		
-	<section id="itens_container">
+	<section id="conteudo_container">
 		<div id="aba_nome"><h1>Professores</h1></div>
 		<div id="conteudo">
 			<table class="table_listagem" border="1">
-				<caption id="table_caption">Lista de Professores</caption>
+				<caption class="table_caption">Lista de Professores</caption>
 				<thead>
 					<tr>
 						<th>Nome</th>
@@ -33,4 +33,4 @@
 		</div>
 		
 	</section>
-</body>
+<?php include "footer.php"; ?>
