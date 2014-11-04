@@ -1,46 +1,52 @@
-<?php require "header.php" ?>
-		
-	<section id="conteudo_container">
-		<div id="aba_nome"><h1>Atividades</h1></div>
-		<div id="conteudo">
-			<table class="table_listagem" border="1">
-				<caption class="table_caption">Lista de Atividades</caption>
-				<thead>
-					<tr>
-						<th>Nome</th>
-						<th>Matéria</th>
-						<th>Tipo</th>
-						<th>Data de Entrega</th>
-						<th>Opções</th>
+<?php 
 
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Derivadas</td>
-						<td>Cálculo 1</td>
-						<td>Lista</td>
-						<td>20/10/2014</td>
-						<td><a href="#" id="opt_ver">Ver</a>  |  <a href="#" id="opt_editar">Editar</a>  |  <a href="#" id="opt_remover">Remover</a></td>
-					</tr>
-					<tr>
-						<td>Lista - Integral</td>
-						<td>Cálculo 2</td>
-						<td>Lista</td>
-						<td>15/11/2014</td>
-						<td><a href="#" id="opt_ver">Ver</a>  |  <a href="#" id="opt_editar">Editar</a>  |  <a href="#" id="opt_remover">Remover</a></td>
-					</tr>
-					<tr>
-						<td>Forms e Interação com BD</td>
-						<td>Desenvolvimento WEB</td>
-						<td>Projeto de Curso</td>
-						<td>30/10/2014</td>
-						<td><a href="#" id="opt_ver">Ver</a>  |  <a href="#" id="opt_editar">Editar</a>  |  <a href="#" id="opt_remover">Remover</a></td>
-					</tr>
-				</tbody>
-			</table>
-			<a href="cadastra_atividade.php" class="add_button">Nova Atividade</a>
-		</div>
-		
-	</section>
+require "header.php";
+require "inc/mysql.php";
+
+function convertDate($data){
+	list($ano, $mes, $dia) = explode("-", $data);
+
+	return $dia.'/'.$mes.'/'.$ano;
+}
+?>
+
+<section id="conteudo_container">
+	<div id="aba_nome"><h1>Atividades</h1></div>
+	<div id="conteudo">
+		<table class="table_listagem" border="1">
+			<caption class="table_caption">Lista de Atividades</caption>
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Matéria</th>
+					<th>Tipo</th>
+					<th>Data de Entrega</th>
+					<th>Opções</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<?php
+					$sql = "SELECT a.id, a.nome, m.nome as materia, a.tipo, a.data_entrega FROM atividades a INNER JOIN materias m ON a.materia_id = m.id";
+					if(!$result = $conexaobd->query($sql)){
+					die('Houve um erro na query [' . $conexaobd->error . ']');
+				}
+				while($aux = $result->fetch_assoc()) {
+				?>
+				<tr>
+					<td><?=$aux["nome"];?></td>
+					<td><?=$aux["materia"];?></td>
+					<td><?=$aux["tipo"];?></td>
+					<td><?=convertDate($aux["data_entrega"]);?></td>
+					<td><a href="cadastra_atividade.php?action=editar&id=<?=$aux["id"];?>" id="opt_editar">Editar</a>  |  <a href="cadastra_materia.php?action=excluir&id=<?=$aux["id"];?>" id="opt_remover" onclick="return confirm('Confirma a exclusão?');">Remover</a></td>
+				</tr>
+				<?php
+				}
+				?>
+			</tbody>
+		</table>
+		<a href="cadastra_atividade.php" class="add_button">Nova Atividade</a>
+	</div>
+
+</section>
 <?php include "footer.php"; ?>

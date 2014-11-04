@@ -1,37 +1,44 @@
-<?php require "header.php" ?>
-		
-	<section id="conteudo_container">
-		<div id="aba_nome"><h1>Matérias</h1></div>
-		<div id="conteudo">
-			<table class="table_listagem" border="1">
-				<caption class="table_caption">Lista de Matérias</caption>
+<?php 
+require "header.php";
+require "inc/mysql.php";
+?>
 
-				<thead>
-					<tr>
-						<th>Nome</th>
-						<th>Professor</th>
-						<th>Créditos</th>
-						<th>Opções</th>
+<section id="conteudo_container">
+	<div id="aba_nome"><h1>Matérias</h1></div>
+	<div id="conteudo">
+		<table class="table_listagem" border="1">
+			<caption class="table_caption">Lista de Matérias</caption>
 
-					</tr>
-				</thead>
-				<tbody>
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Professor</th>
+					<th>Créditos</th>
+					<th>Opções</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<?php
+				$sql = "SELECT m.id, m.nome, p.nome as professor, creditos FROM materias m INNER JOIN professores p ON m.professor_id = p.id";
+				if(!$result = $conexaobd->query($sql)){
+					die('Houve um erro na query [' . $conexaobd->error . ']');
+				}
+				while($aux = $result->fetch_assoc()) {
+					?>
 					<tr>
-						<td>Estrutura de Dados</td>
-						<td>Paulo Costa</td>
-						<td>4</td>
-						<td><a href="#" id="opt_ver">Ver</a>  |  <a href="#" id="opt_editar">Editar</a>  |  <a href="#" id="opt_remover">Remover</a></td>
+						<td><?=$aux["nome"];?></td>
+						<td><?=$aux["professor"];?></td>
+						<td><?=$aux["creditos"];?></td>
+						<td><a href="cadastra_materia.php?action=editar&id=<?=$aux["id"];?>" id="opt_editar">Editar</a>  |  <a href="cadastra_materia.php?action=excluir&id=<?=$aux["id"];?>" id="opt_remover" onclick="return confirm('Confirma a exclusão?');">Remover</a></td>
 					</tr>
-					<tr>
-						<td>Inteligência Artificial</td>
-						<td>Alvaro Coelho</td>
-						<td>4</td>
-						<td><a href="#" id="opt_ver">Ver</a>  |  <a href="#" id="opt_editar">Editar</a>  |  <a href="#" id="opt_remover">Remover</a></td>
-					</tr>
-				</tbody>
-			</table>
-			<a href="cadastra_materia.php" class="add_button">Nova Matéria</a>
-		</div>
-		
-	</section>
+					<?php
+				}
+				?>
+			</tbody>
+		</table>
+		<a href="cadastra_materia.php" class="add_button">Nova Matéria</a>
+	</div>
+
+</section>
 <?php include "footer.php"; ?>

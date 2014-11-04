@@ -1,36 +1,49 @@
-<?php require "header.php" ?>
-		
-	<section id="conteudo_container">
-		<div id="aba_nome"><h1>Provas</h1></div>
-		<div id="conteudo">
-			<table class="table_listagem" border="1">
-				<caption class="table_caption">Lista de Provas</caption>
-				<thead>
-					<tr>
-						<th>Matéria</th>
-						<th>Data</th>
-						<th>Assuntos</th>
-						<th>Opções</th>
+<?php 
+require "header.php";
+require "inc/mysql.php";
 
-					</tr>
-				</thead>
-				<tbody>
+function convertDate($data){
+	list($ano, $mes, $dia) = explode("-", $data);
+
+	return $dia.'/'.$mes.'/'.$ano;
+}
+?>
+
+<section id="conteudo_container">
+	<div id="aba_nome"><h1>Provas</h1></div>
+	<div id="conteudo">
+		<table class="table_listagem" border="1">
+			<caption class="table_caption">Lista de Provas</caption>
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Matéria</th>
+					<th>Data</th>
+					<th>Opções</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php
+				$sql = "SELECT p.id, p.nome, m.nome as materia, p.data_prova FROM provas p INNER JOIN materias m ON p.materia_id=m.id";
+				if(!$result = $conexaobd->query($sql)){
+					die('Houve um erro na query [' . $conexaobd->error . ']');
+				}
+				while($aux = $result->fetch_assoc()) {
+					?>
 					<tr>
-						<td>Teoria da Computação</td>
-						<td>30/09/2014</td>
-						<td>Linguagens não sensí...</td>
-						<td><a href="#" id="opt_ver">Ver</a>  |  <a href="#" id="opt_editar">Editar</a>  |  <a href="#" id="opt_remover">Remover</a></td>
+						<td><?=$aux["nome"];?></td>
+						<td><?=$aux["materia"];?></td>
+						<td><?=convertDate($aux["data_prova"]);?></td>
+						<td><a href="cadastra_prova.php?action=editar&id=<?=$aux["id"];?>" id="opt_editar">Editar</a>  |  <a href="cadastra_prova.php?action=excluir&id=<?=$aux["id"];?>" id="opt_remover" onclick="return confirm('Confirma a exclusão?');">Remover</a></td>
 					</tr>
-					<tr>
-						<td>Redes 1</td>
-						<td>30/09/2014</td>
-						<td>Camada de Aplicação</td>
-						<td><a href="#" id="opt_ver">Ver</a>  |  <a href="#" id="opt_editar">Editar</a>  |  <a href="#" id="opt_remover">Remover</a></td>
-					</tr>
-				</tbody>
-			</table>
-			<a href="cadastra_professor.php" class="add_button">Nova Prova</a>
-		</div>
-		
-	</section>
+					<?php
+				}
+				?>
+
+			</tbody>
+		</table>
+		<a href="cadastra_prova.php" class="add_button">Nova Prova</a>
+	</div>
+
+</section>
 <?php include "footer.php"; ?>

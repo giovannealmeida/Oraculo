@@ -5,7 +5,8 @@
 
 body{
 	font-family: Consolas, sans-serif;
-	background-color:#5A9D2E;
+	/*background-color:#5A9D2E;*/
+	background-image: url("../imgs/back.jpg");
 }
 
 header img{
@@ -21,7 +22,7 @@ footer {
 	bottom: 0px;
 	text-align: center;
 	clear: both;
-	background-color: #060;
+	background-color: rgba(52, 105, 52, 1);
 	border-top: 1px solid black;
 	padding: 10px;
 	color: white;
@@ -35,11 +36,25 @@ footer {
 	float: left;
 	background-color: #FFFF99;
 	width: 200px;
-	margin: 0px 15px;
-	margin-bottom: 30px;
+	margin: 0px 0px 40px 30px;
 	padding: 20px 0;
 	height: 400px;
+	border-radius: 5px;
 
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+
+#user_info:hover{
+	box-shadow: 6px 10px 3px rgba(0, 0, 0, 0.4), 10px 10px 5px rgba(0, 0, 0, 0.33);
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
 }
 
 #user_info img.user_img {
@@ -95,18 +110,45 @@ footer {
 
 .nav_links ul li:hover{
 	background-color: black;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
 }
 
 .nav_links ul li a:hover{
 	color: white;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
 }
 
 #conteudo_container {
 	float: left;
 	background-color: #FFFF99;
-	width: 1000px;
+	width: 1060px;
 	padding: 20px 0;
 	min-height: 400px;
+	margin-left: 30px;
+	margin-bottom: 20px;
+
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+
+#conteudo_container:hover{
+	box-shadow: 6px 10px 3px rgba(0, 0, 0, 0.4), 10px 10px 5px rgba(0, 0, 0, 0.33);
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
 }
 
 #aba_nome{
@@ -115,14 +157,14 @@ footer {
 	margin-top: -70px;
 	padding: 10px;
 	height: 0;
-    min-width: 100px;
-    line-height: 50px;
-    text-decoration: none;
-    color: black;
+	min-width: 100px;
+	line-height: 50px;
+	text-decoration: none;
+	color: black;
 	font-size:15px;
-    font-weight: bold;
-    border-right: 30px solid transparent;
-    border-bottom: 30px solid #FFFF99;
+	font-weight: bold;
+	border-right: 30px solid transparent;
+	border-bottom: 30px solid #FFFF99;
 }
 
 
@@ -163,30 +205,30 @@ footer {
 
 
 .table_listagem {
-    width: 100%;
+	width: 100%;
 	margin-bottom:20px;
-    border-collapse: collapse;
-    text-align: center;
-    border: solid 1px black;
+	border-collapse: collapse;
+	text-align: center;
+	border: solid 1px black;
 }
 
 .table_listagem td, .table_listagem th {
-    font-size: 1em;
-    border: 0px solid black;
-    padding: 3px 7px 2px 7px;
+	font-size: 1em;
+	border: 0px solid black;
+	padding: 3px 7px 2px 7px;
 }
 
 .table_listagem th {
-    font-size: 1.1em;
-    padding-top: 5px;
-    padding-bottom: 4px;
-    background-color: #060;
+	font-size: 1.1em;
+	padding-top: 5px;
+	padding-bottom: 4px;
+	background-color: #060;
 	font-weight:normal;
-    color: #D7F4D7;
+	color: #D7F4D7;
 }
 
 .table_listagem td {
-    background-color: white;
+	background-color: white;
 }
 
 .table_listagem td a{
@@ -219,36 +261,33 @@ footer {
 	color: white;
 }
 
-.clean_button{
+.func_button{
 	padding: 7px;
-	margin:5px;
+	margin-top:15px;
+	margin-left:28px;
 	width:120px;
 	border: 2px solid black;
-	background: #F85230;
 	text-decoration: none;
 	font-weight:bold;
 	color: white;
 }
 
-.clean_button:hover{
+#clean_button{
+	background: #F85230;
+}
+
+#clean_button:hover{
 	background: #C30;
 	color:#FFF;
 }
 
-.clean_button:active{
+#clean_button:active{
 	background: #971D05;
 	color: white;
 }
 
 .back_button{
-	padding: 7px;
-	margin:5px;
-	width:120px;
-	border: 2px solid black;
 	background: #40B3B3;
-	text-decoration: none;
-	font-weight:bold;
-	color: white;
 }
 
 .back_button:hover{
@@ -261,49 +300,58 @@ footer {
 	color: white;
 }
 
-.save_button{
-	padding: 7px;
-	margin:5px;
-	width:120px;
-	border: 2px solid black;
+#save_button{
 	background: #090;
-	text-decoration: none;
-	font-weight:bold;
-	color: white;
 }
 
-.save_button:hover{
+#save_button:hover{
 	background: #2E8426;
 	color:#FFF;
 }
 
-.save_button:active{
+#save_button:active{
 	background: #060;
 	color: white;
 }
 
 #form form  label{
-	height: 10px;
-	margin-top: 4px;
-	padding-top: 12px;
-	padding-left: 6px;
-	min-width: 100px;
+	min-width: 166px;
 	text-align: right;
 	float: left;
-	font-size: 1.2em;
+	margin-top: 18px;
+	margin-right: 5px;
 }
 
 #form form  .input_text{
-	margin: 15px 0px 0px 15px;
-	height: 20px;
-	padding: 1px 0px 1px 2px;
+	
+	height: 27px;
+	padding: 0px 0px 0px 9px;
 	background-color: #FFF;
 	width: 250px;
 	color: #333;
 	border: 1px ridge #CACACA;
+	margin-top: 15px;
+}
 
+form textarea{
+	resize:none;
+	width: 430px;
 }
 
 #form {
 	margin-left: 30px;
+
+}
+
+aside.info_status{
+	float: right;
+	margin-right: 145px;
+	border: 2px solid;
+	padding: 28px;
+}
+aside.info_status#sucesso{
+	color: #0FDE0F;
+}
+aside.info_status#falha{
+	color: red;
 }
