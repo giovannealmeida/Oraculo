@@ -1,5 +1,6 @@
 <?php
 require_once "inc/mysql.php";
+session_start();
 
 if (isset($_POST["Nome"]) && $_POST["Nome"] != "") {
 	$nome = $_POST["Nome"];
@@ -13,7 +14,7 @@ if (isset($_POST["Nome"]) && $_POST["Nome"] != "") {
 
 	if ($_POST["action"] == "add") {
 		$sql = "INSERT INTO provas (nome, data_prova, assuntos, materia_id, usuario_id) 
-				VALUES (\"{$nome}\", \"{$data}\", \"{$assuntos}\", \"{$materia}\",'1');";
+				VALUES (\"{$nome}\", \"{$data}\", \"{$assuntos}\", \"{$materia}\",\"{$_SESSION['id']}\");";
 	}elseif ($_POST["action"] == "editar") {
 		$id = $_POST["id"];
 		$sql = "UPDATE provas SET 

@@ -32,6 +32,91 @@ footer {
 	background-color: white;
 }
 
+#single_container{
+	background-color: #FFFF99;
+	width: 300px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+#single_container p {
+	text-align: right;
+	font-weight: bold;
+}
+
+#single_container a{
+	background: #40B3B3;
+	text-align: right;
+	padding: 5px;
+	color: white;
+	text-decoration: none;
+	border: solid 1px black;
+
+}
+p#login_error_msg{
+	color: red;
+
+}
+#single_container a:hover{
+	background: #099;
+	color:#FFF;
+}
+
+#single_container a:active{
+	background: #266B6B;
+	color: white;
+}
+
+#single_container fieldset {
+	width: 300px;
+	padding-top: 10px;
+
+}
+#single_container fieldset legend{
+	font-size: 1.3em;
+	margin-left: 10px;
+}
+
+#single_container fieldset label{
+	width: 50px;
+	height: 100px;
+	margin-top: 15px;
+	margin-left: 10px;
+}
+
+#single_container fieldset input.single_input{
+	height: 28px;
+	width: 276px;
+	margin-left: 10px;
+	margin-bottom: 15px;
+
+	
+}
+
+#login_button{
+	padding: 7px;
+	width: 250px;
+	height: 50px;
+	border: 2px solid black;
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	margin-left: 25px;
+	margin-bottom: 20px;
+	background: #090;
+
+}
+
+#login_button:hover{
+	background: #2E8426;
+	color:#FFF;
+}
+
+#login_button:active{
+	background: #060;
+	color: white;
+}
+
 #user_info {
 	float: left;
 	background-color: #FFFF99;
@@ -63,7 +148,7 @@ footer {
 	width: 100px;
 }
 
-#user_info img.config_img {
+#user_info img.user_config_icon {
 	margin: 0 auto;
 	width: 20px;
 }
@@ -130,6 +215,7 @@ footer {
 	float: left;
 	background-color: #FFFF99;
 	width: 1060px;
+	max-width: 90%;
 	padding: 20px 0;
 	min-height: 400px;
 	margin-left: 30px;
@@ -286,20 +372,6 @@ footer {
 	color: white;
 }
 
-.back_button{
-	background: #40B3B3;
-}
-
-.back_button:hover{
-	background: #099;
-	color:#FFF;
-}
-
-.back_button:active{
-	background: #266B6B;
-	color: white;
-}
-
 #save_button{
 	background: #090;
 }
@@ -321,6 +393,18 @@ footer {
 	margin-top: 18px;
 	margin-right: 5px;
 }
+
+div#form #form_usuario label{
+	min-width: 50px;
+	text-align: left;
+
+}
+
+div#form #form_usuario .input_text{
+	width: 290px;
+	
+}
+
 
 #form form  .input_text{
 	

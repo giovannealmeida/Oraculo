@@ -17,7 +17,7 @@ else {
   $action = "add";
 }
 
-$sql2 = "SELECT * FROM professores";
+$sql2 = "SELECT * FROM professores WHERE usuario_id={$_SESSION['id']}";
     if(!$result2 = $conexaobd->query($sql2)){
       die('Houve um erro na query [' . $conexaobd->error . ']');
     }

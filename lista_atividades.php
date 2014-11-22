@@ -27,7 +27,8 @@ function convertDate($data){
 			</thead>
 			<tbody>
 				<?php
-					$sql = "SELECT a.id, a.nome, m.nome as materia, a.tipo, a.data_entrega FROM atividades a INNER JOIN materias m ON a.materia_id = m.id";
+					$sql = "SELECT a.id, a.nome, m.nome as materia, a.tipo, a.data_entrega FROM atividades a INNER JOIN materias m ON a.materia_id = m.id WHERE a.usuario_id={$_SESSION['id']}";
+					
 					if(!$result = $conexaobd->query($sql)){
 					die('Houve um erro na query [' . $conexaobd->error . ']');
 				}

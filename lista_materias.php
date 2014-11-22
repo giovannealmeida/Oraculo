@@ -20,7 +20,7 @@ require "inc/mysql.php";
 			</thead>
 			<tbody>
 				<?php
-				$sql = "SELECT m.id, m.nome, p.nome as professor, creditos FROM materias m INNER JOIN professores p ON m.professor_id = p.id";
+				$sql = "SELECT m.id, m.nome, p.nome as professor, creditos FROM materias m INNER JOIN professores p ON m.professor_id = p.id WHERE m.usuario_id={$_SESSION['id']}";
 				if(!$result = $conexaobd->query($sql)){
 					die('Houve um erro na query [' . $conexaobd->error . ']');
 				}

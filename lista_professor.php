@@ -19,7 +19,7 @@ require "inc/mysql.php";
 			</thead>
 			<tbody>
 				<?php
-				$sql = "SELECT * FROM professores";
+				$sql = "SELECT * FROM professores p WHERE p.usuario_id={$_SESSION['id']}";
 				if(!$result = $conexaobd->query($sql)){
 					die('Houve um erro na query [' . $conexaobd->error . ']');
 				}

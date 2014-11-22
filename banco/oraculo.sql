@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 04-Nov-2014 às 21:29
+-- Generation Time: 22-Nov-2014 às 18:39
 -- Versão do servidor: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -34,14 +34,7 @@ CREATE TABLE IF NOT EXISTS `atividades` (
   `info` text COLLATE utf8_bin,
   `materia_id` int(11) DEFAULT NULL,
   `usuario_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=4 ;
-
---
--- Extraindo dados da tabela `atividades`
---
-
-INSERT INTO `atividades` (`id`, `nome`, `tipo`, `data_entrega`, `info`, `materia_id`, `usuario_id`) VALUES
-(3, 'Tarefa 4', 'Trabalho', '2014-11-12', 'Tarefa sobre Formulários', 3, 1);
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -56,14 +49,7 @@ CREATE TABLE IF NOT EXISTS `materias` (
   `info` text COLLATE utf8_bin,
   `professor_id` int(11) DEFAULT NULL,
   `usuario_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=4 ;
-
---
--- Extraindo dados da tabela `materias`
---
-
-INSERT INTO `materias` (`id`, `nome`, `creditos`, `info`, `professor_id`, `usuario_id`) VALUES
-(3, 'WEB', '4', 'ASDASDASD', 4, 1);
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -79,14 +65,7 @@ CREATE TABLE IF NOT EXISTS `professores` (
   `telefone` varchar(20) COLLATE utf8_bin DEFAULT NULL,
   `info` text COLLATE utf8_bin,
   `usuario_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=7 ;
-
---
--- Extraindo dados da tabela `professores`
---
-
-INSERT INTO `professores` (`id`, `nome`, `email`, `lattes`, `telefone`, `info`, `usuario_id`) VALUES
-(4, 'Dany Sanches', 'dany@email.com.br', 'http://lattes.cnpq.br/', '73-99999998', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 1);
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -101,14 +80,7 @@ CREATE TABLE IF NOT EXISTS `provas` (
   `assuntos` text COLLATE utf8_bin,
   `materia_id` int(11) DEFAULT NULL,
   `usuario_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=4 ;
-
---
--- Extraindo dados da tabela `provas`
---
-
-INSERT INTO `provas` (`id`, `nome`, `data_prova`, `assuntos`, `materia_id`, `usuario_id`) VALUES
-(3, 'P5', '2014-11-20', 'Formulários e Banco de Dados', 3, 1);
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -119,16 +91,10 @@ INSERT INTO `provas` (`id`, `nome`, `data_prova`, `assuntos`, `materia_id`, `usu
 CREATE TABLE IF NOT EXISTS `usuario` (
 `id` int(11) NOT NULL,
   `email` varchar(100) COLLATE utf8_bin DEFAULT NULL,
-  `senha` varchar(10) COLLATE utf8_bin DEFAULT NULL,
-  `nome` varchar(255) COLLATE utf8_bin DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
-
---
--- Extraindo dados da tabela `usuario`
---
-
-INSERT INTO `usuario` (`id`, `email`, `senha`, `nome`) VALUES
-(1, 'admin@localhost.com', '123123', 'admin');
+  `senha` varchar(20) COLLATE utf8_bin DEFAULT NULL,
+  `nome` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `img_nome` varchar(100) COLLATE utf8_bin DEFAULT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
 
 --
 -- Indexes for dumped tables
@@ -172,27 +138,27 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT for table `atividades`
 --
 ALTER TABLE `atividades`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1;
 --
 -- AUTO_INCREMENT for table `materias`
 --
 ALTER TABLE `materias`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1;
 --
 -- AUTO_INCREMENT for table `professores`
 --
 ALTER TABLE `professores`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1;
 --
 -- AUTO_INCREMENT for table `provas`
 --
 ALTER TABLE `provas`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1;
 --
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1;
 --
 -- Constraints for dumped tables
 --

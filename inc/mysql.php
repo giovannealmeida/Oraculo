@@ -2,7 +2,7 @@
 $host = "localhost";
 $usuario = "root";
 $senha = "";
-$banco = "oraculo";
+$banco = "oraculo2";
 
 
 $conexaobd = new mysqli($host, $usuario, $senha, $banco);
