@@ -32,6 +32,11 @@ footer {
 	background-color: white;
 }
 
+p#login_error_msg{
+	color: red;
+
+}
+
 #single_container{
 	background-color: #FFFF99;
 	width: 300px;
@@ -53,10 +58,34 @@ footer {
 	border: solid 1px black;
 
 }
-p#login_error_msg{
-	color: red;
 
+#single_container_cadastro{
+	background-color: #FFFF99;
+	width: 400px;
+	margin: 0 auto;
+	padding: 20px;
 }
+
+#single_container_cadastro fieldset legend{
+	font-size: 1.3em;
+	margin-left: 10px;
+}
+
+#single_container_cadastro fieldset label{
+	width: 50px;
+	height: 100px;
+	margin-top: 15px;
+	margin-left: 10px;
+}
+
+#single_container_cadastro fieldset input.single_input{
+	height: 28px;
+	width: 372px;
+	margin-left: 10px;
+	margin-bottom: 15px;
+}
+
+
 #single_container a:hover{
 	background: #099;
 	color:#FFF;
@@ -114,6 +143,54 @@ p#login_error_msg{
 
 #login_button:active{
 	background: #060;
+	color: white;
+}
+
+#cadastro_submit{
+	padding: 7px;
+	width: 150px;
+	height: 50px;
+	border: 2px solid black;
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	margin-left: 25px;
+	margin-bottom: 20px;
+	background: #090;
+
+}
+
+#cadastro_submit:hover{
+	background: #2E8426;
+	color:#FFF;
+}
+
+#cadastro_submit:active{
+	background: #060;
+	color: white;
+}
+
+#cadastro_reset{
+	padding: 7px;
+	width: 150px;
+	height: 50px;
+	border: 2px solid black;
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	margin-left: 25px;
+	margin-bottom: 20px;
+	background: #F85230;
+
+}
+
+#cadastro_reset:hover{
+	background: #C30;
+	color:#FFF;
+}
+
+#cadastro_reset:active{
+	background: #971D05;
 	color: white;
 }
 
