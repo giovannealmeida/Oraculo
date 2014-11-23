@@ -30,10 +30,10 @@
 		<form id="form_cadastro" action="usuario_process.php" method="post">
 			<fieldset>
 				<legend>Cadastro</legend>
-				<label for="cadastro_nome">Nome:</label><br/><input type="text" name="nome" placeholder="Nome" id="cadastro_nome" class="validate[required] single_input" /><br/>
-				<label for="cadastro_email">Email:</label><br/><input type="text" name="email" placeholder="Email" id="cadastro_email" class="validate[required] single_input" /><br/>
-				<label for="cadastro_senha">Senha:</label><br/><input type="password" name="senha" placeholder="Senha" id="cadastro_senha" class="validate[required] single_input"/><br/>
-				<label for="cadastro_senha2">Digite a Senha Novamente:</label><br/><input type="password" name="senha" placeholder="Senha" id="cadastro_senha2" class="validate[required,equals[cadastro_senha]] single_input"/>
+				<label for="cadastro_nome">Nome:</label><br/><input type="text" name="nome" id="cadastro_nome" class="validate[required] single_input" /><br/>
+				<label for="cadastro_email">Email:</label><br/><input type="text" name="email"  id="cadastro_email" class="validate[required, custom[email]] single_input" /><br/>
+				<label for="cadastro_senha">Senha:</label><br/><input type="password" name="senha"  id="cadastro_senha" class="validate[required] single_input"/><br/>
+				<label for="cadastro_senha2">Digite a Senha Novamente:</label><br/><input type="password" name="senha" id="cadastro_senha2" class="validate[required,equals[cadastro_senha]] single_input"/>
 				
 				<input id="cadastro_reset" type="reset" value="LIMPAR">
 				<input id="cadastro_submit" type="submit" value="CADASTRAR" />

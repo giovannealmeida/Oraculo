@@ -471,6 +471,11 @@ p#login_error_msg{
 	margin-right: 5px;
 }
 
+#form form label.notas_label{
+	float: none;
+	text-align: left;
+}
+
 div#form #form_usuario label{
 	min-width: 50px;
 	text-align: left;

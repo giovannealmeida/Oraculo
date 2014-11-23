@@ -50,7 +50,6 @@
 					<h2 class="list_titulo">Desempenho</h2>
 					<ul>
 						<li><a href="notas.php">Notas</a></li>
-						<li><a href="logout.php">Gráficos</a></li>
 					</ul>
 				</nav>
 			</section>
