@@ -27,7 +27,7 @@
 	<section id="single_container">
 		<?php 
 		if (isset($_GET['error'])) {
-			echo "<p id='login_error_msg'>A senha ou email não conferem!</p>";
+			echo "<p id='error_msg'>A senha ou email não conferem!</p>";
 		}
 		else echo "<br/>";
 		?>

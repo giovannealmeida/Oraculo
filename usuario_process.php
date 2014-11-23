@@ -56,18 +56,32 @@ else{
 		$nome = $_POST['nome'];
 		$senha = $_POST['senha'];
 
+		$sql = "SELECT * FROM usuario WHERE email=\"{$email}\"";
 
-		$sql = "INSERT INTO usuario (email, senha, nome, img_nome) VALUES (\"{$email}\", \"{$senha}\", \"{$nome}\", 'usuarioM.jpg');";
 		if(!$result = $conexaobd->query($sql))
 			die('Houve um erro na query [' . $conexaobd->error . ']');
 
-		$sql = "SELECT LAST_INSERT_ID() as id;";
-		if(!$result = $conexaobd->query($sql))
-			die('Houve um erro na query [' . $conexaobd->error . ']');
-		$aux = $result->fetch_assoc();
+		echo $result->num_rows;
+		// die("A");
+		if ($result->num_rows != 0) {
+			// die("B");
+			header("Location: cadastro.php?error=email");
+		}
+		// die("C");
+		else{
+			$sql = "INSERT INTO usuario (email, senha, nome, img_nome) VALUES (\"{$email}\", \"{$senha}\", \"{$nome}\", 'usuarioM.jpg');";
+			if(!$result = $conexaobd->query($sql))
+				die('Houve um erro na query [' . $conexaobd->error . ']');
 
-		$_SESSION['id'] = $aux['id'];
-		header("Location: index.php");
+			$sql = "SELECT LAST_INSERT_ID() as id;";
+			if(!$result = $conexaobd->query($sql))
+				die('Houve um erro na query [' . $conexaobd->error . ']');
+			$aux = $result->fetch_assoc();
+
+			$_SESSION['id'] = $aux['id'];
+			header("Location: index.php");
+		}
+		
 	}
 
 }

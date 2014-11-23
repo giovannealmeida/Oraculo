@@ -32,7 +32,7 @@ footer {
 	background-color: white;
 }
 
-p#login_error_msg{
+p#error_msg{
 	color: red;
 
 }

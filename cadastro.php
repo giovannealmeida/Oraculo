@@ -16,6 +16,11 @@
 					'equals': {
 						'message': "As senhas não correspondem."
 					}
+				},
+				'#cadastro_senha': {
+					'equals': {
+						'message': "As senhas não correspondem."
+					}
 				}
 			}
 		});
@@ -28,11 +33,18 @@
 	</header>
 	<section id="single_container_cadastro">
 		<form id="form_cadastro" action="usuario_process.php" method="post">
+		<?php
+			if (isset($_GET['error']) && $_GET['error'] == "email") {
+				echo "<p id=\"error_msg\">O email já foi cadastrado</p>";
+			}
+			else
+				echo "<br/>";
+		?>
 			<fieldset>
 				<legend>Cadastro</legend>
 				<label for="cadastro_nome">Nome:</label><br/><input type="text" name="nome" id="cadastro_nome" class="validate[required] single_input" /><br/>
 				<label for="cadastro_email">Email:</label><br/><input type="text" name="email"  id="cadastro_email" class="validate[required, custom[email]] single_input" /><br/>
-				<label for="cadastro_senha">Senha:</label><br/><input type="password" name="senha"  id="cadastro_senha" class="validate[required] single_input"/><br/>
+				<label for="cadastro_senha">Senha:</label><br/><input type="password" name="senha"  id="cadastro_senha" class="validate[required,equals[cadastro_senha2]] single_input"/><br/>
 				<label for="cadastro_senha2">Digite a Senha Novamente:</label><br/><input type="password" name="senha" id="cadastro_senha2" class="validate[required,equals[cadastro_senha]] single_input"/>
 				
 				<input id="cadastro_reset" type="reset" value="LIMPAR">
