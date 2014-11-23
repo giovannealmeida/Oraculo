@@ -1,6 +1,6 @@
 <?php 
-require "header.php";
-require "inc/mysql.php";
+require_once "header.php";
+require_once "inc/mysql.php";
 ?>
 
 <section id="conteudo_container">

@@ -20,7 +20,7 @@
 
 <body>
 	<?php 
-	require "inc/mysql.php"; 
+	require_once "inc/mysql.php"; 
 	$sql = "SELECT * FROM usuario WHERE id={$_SESSION['id']}";
 	if(!$result = $conexaobd->query($sql))
 		die('Houve um erro na query [' . $conexaobd->error . ']');

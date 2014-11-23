@@ -2,8 +2,8 @@
 if (!isset($_GET['id'])) {
 	header("Location: index.php");
 }
-require "header.php";
-require "inc/mysql.php";
+require_once "header.php";
+require_once "inc/mysql.php";
 ?>
 <script type="text/javascript">
   jQuery(document).ready(function(){

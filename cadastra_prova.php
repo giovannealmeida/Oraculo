@@ -5,8 +5,8 @@ function convertDate($data){
   return $dia.'/'.$mes.'/'.$ano;
 }
 
-require "header.php";
-require "inc/mysql.php"; 
+require_once "header.php";
+require_once "inc/mysql.php"; 
 
 if (isset($_GET["action"]) && isset($_GET["id"])) {
   $id = $_GET["id"];

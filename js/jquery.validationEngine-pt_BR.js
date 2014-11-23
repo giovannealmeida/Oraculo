@@ -89,7 +89,7 @@
                     "alertText": "* Número inteiro inválido"
                 },
                 "number": {
-                    "regex": /^[+]?([0-9]+(?:[\.][0-9]*)?|\.[0-9]+)$/,
+                    "regex": /^(?!0*[.,]0*$|[.,]0*$|0*$)\d+[,.]?\d{0,2}$/,
                     "alertText": "* Número decimal inválido"
                 },
                 "date": {

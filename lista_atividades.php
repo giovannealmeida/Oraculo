@@ -1,7 +1,7 @@
 <?php 
 
-require "header.php";
-require "inc/mysql.php";
+require_once "header.php";
+require_once "inc/mysql.php";
 
 function convertDate($data){
 	list($ano, $mes, $dia) = explode("-", $data);
