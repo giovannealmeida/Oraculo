@@ -29,7 +29,7 @@ if (isset($_POST["Nome"]) && $_POST["Nome"] != "") {
 	}
 
 	$conexaobd->close();
-	header("Location: cadastra_atividade.php?sucess=1&action={$_POST["action"]}");
+	header("Location: cadastra_prova.php?sucess=1&action={$_POST["action"]}");
 }
 if (isset($_GET["action"]) && $_GET["action"] == "excluir") {
 
